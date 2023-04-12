@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}
+Predict Page
+{% endblock %}
+
+{% block content %}
+ 
+
+<h1>Welcome to the Disaster Tweet Predictor</h1>
+<p>Please enter the text of the tweet you want to predict:</p>
+<form method="POST" action="{{ url_for('predict_disaster') }}">
+  <label for="tweet">Enter the tweet text:</label>
+  <input type="text" id="tweet" name="tweet" required>
+  <button type="submit">Predict</button>
+</form>
+
+
+  <style>
+      body {
+        background-color: black;
+      }
+      h1, p {
+        color: white;
+        text-align: center;
+        margin-top: 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 50%;
+      }
+      button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    </style>
+
+
+  <style>
+ .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+
+
+
+
+  }
+
+ </style>
+
+
+
+{% endblock %}

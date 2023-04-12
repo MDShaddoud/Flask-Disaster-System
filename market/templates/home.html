@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+
+{% block title %}
+   Home Page
+{% endblock %}
+
+
+
+ <!-- 
+ ######################################################################################### -->
+
+ <!--<div class="container">-->
+ <!--    <div class="form-group">-->
+
+ <!--        <p class="a" style="font-size:28px;color: white;text-shadow: 120px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, dicta reiciendis? Ipsa delectus eligendi odio ut hic quibusdam corrupti odit doloremque perspiciatis. Neque, quisquam. Nihil sint tempora sunt provident nam?</p>-->
+ <!--      <label for="input-field">Check Your News</label>-->
+
+ <!--      <option type="text" class="form-control" id="input-field" placeholder="Enter Your News ">-->
+
+
+
+
+
+ <!--    </div>-->
+
+ <!--       <button type="button" class="btn btn-primary">Predict</button>-->
+
+
+
+ <!--  </div>-->
+
+
+
+ <!-- <form>-->
+ <!--    <label for="tweet">Enter tweet:</label>-->
+ <!--    <input type="text" id="tweet" name="tweet"><br><br>-->
+ <!--    <button type="button" onclick="predict()">Predict</button>-->
+ <!--  </form>-->
+ <!--  <p id="result"></p>-->
+
+ <!--  <script>-->
+ <!--    function predict() {-->
+ <!--      var tweet = document.getElementById("tweet").value;-->
+ <!--      var xhr = new XMLHttpRequest();-->
+ <!--      xhr.open("POST", "/predict");-->
+ <!--      xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");-->
+ <!--      xhr.onload = function() {-->
+ <!--        if (xhr.status === 200) {-->
+ <!--          var result = xhr.responseText;-->
+ <!--          document.getElementById("result").innerHTML = result;-->
+ <!--        } else {-->
+ <!--          alert('Request failed.  Returned status of ' + xhr.status);-->
+ <!--        }-->
+ <!--      };-->
+ <!--      xhr.send(JSON.stringify({"tweet": tweet}));-->
+ <!--    }-->
+ <!--  </script>-->
+
+
+ <!-- <style>
+ .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+
+
+
+
+  }
+
+ </style> -->
+
+
+
+
+
+
+{% block content %}
+<div class="position-relative overflow-hidden p-2 p-md-5 m-md-1 text-center  custom-box" style="color:white">
+  <div class="col-md-4 p-lg-1 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal"> Market</h1>
+    <p class="lead font-weight-normal bg-info">Start purchasing products by clicking the link below</p>
+    <a class="btn btn-primary" href="{{ url_for('market_page') }}">Get Started</a>
+  </div>
+  <div class="product-device box-shadow d-none d-md-block"></div>
+  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+<div class="position-relative overflow-hidden p-2 p-md-5 m-md-1 text-center  custom-box" style="color:white">
+  <div class="col-md-4 p-lg-1 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal"> predict</h1>
+    <p class="lead font-weight-normal bg-info">Start purchasing products by clicking the link below</p>
+    <a class="btn btn-primary" href="{{ url_for('predict_page') }}">Get Started</a>
+  </div>
+  <div class="product-device box-shadow d-none d-md-block"></div>
+  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+</div>
+
+
+<style>
+  .custom-box {
+    max-width: 1600px;
+    background-color: transparent;
+  }
+</style>
+
+
+
+<style>
+  .custom-box {
+    max-width: 1600px;
+    background-color: transparent;
+  }
+</style>
+
+{% endblock %}
+
+
+
